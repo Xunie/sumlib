@@ -4,6 +4,7 @@
 #include <random>
 #include <vector>
 
+#define SUMLIB_ENABLE_DANGEROUS
 #include "sumlib.hpp"
 
 using namespace std;

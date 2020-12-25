@@ -28,6 +28,8 @@ namespace sumlib {
         virtual T get() const = 0;
     };
 
+#ifdef SUMLIB_ENABLE_DANGEROUS
+
     /**
      * Naive summing algorithm, not recommended! (for completeness sake)
      */
@@ -97,6 +99,7 @@ namespace sumlib {
             return accumulate(begin(xs), end(xs), (T)0);
         }
     };
+#endif /* SUMLIB_ENABLE_DANGEROUS */
 
     /**
      * Traditional kahan summation algorithm

@@ -2,6 +2,8 @@ cmake_minimum_required( VERSION 3.0 )
 
 project( sumlib )
 
+include( CTest )
+
 add_library( sumlib INTERFACE )
 
 target_include_directories( sumlib
@@ -32,3 +34,5 @@ if( SUMLIB_BUILD_EXAMPLES )
             CXX_STANDARD 17
     )
 endif()
+
+include( cmake/tests.cmake )
